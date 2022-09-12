@@ -14,32 +14,32 @@
   </head>
 
   <body>
-    <!-- Here is our main header that is used across all the pages of our website -->
-
-    <header>
-      <h1>Zyoger</h1>
+    <header class="header">
+        <div class="container">
+            <div class="header_inner">
+                <div class="logo"><h1>Zyoger</h1></div>
+                <nav class="nav">
+                    <a class="nav_link" href="{% url "home" %}">Главная</a>
+                    <a class="nav_link" href="{% url "about" %}">Обо мне</a>
+                    <a class="nav_link" href="{% url "works" %}">Мои проекты</a>
+                    <a class="nav_link" href="{% url "contacts" %}">Контакты</a>
+                </nav>
+            </div>
+        </div>
     </header>
 
-    <nav>
-      <ul>
-        <li><a href="{% url "home" %}">Главная</a></li>
-        <li><a href="{% url "about" %}">Обо мне</a></li>
-        <li><a href="{% url "works" %}">Мои проекты</a></li>
-        <li><a href="{% url "contacts" %}">Контакты</a></li>
-      </ul>
-     </nav>
-
-    <!-- Here is our page's main content -->
-    <main>
+    <div class="intro">
+        <div class="container">
         {% block content %}
         
         {% endblock %}
-    </main>
+        </div>
+    </div>
 
-    <!-- And here is our main footer that is used across all the pages of our website -->
-
-    <footer>
-      <p>©Zyoger 2022.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_end">©Zyoger 2022.</div>
+        </div>
     </footer>
 
   </body>
