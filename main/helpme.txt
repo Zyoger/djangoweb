@@ -1,0 +1,10 @@
+---daemon---
+sudo systemctl daemon-reload
+
+---nginx---
+sudo systemctl restart nginx
+sudo nginx -t && sudo systemctl restart nginx
+
+---gunicorn---
+sudo systemctl restart gunicorn
+sudo systemctl restart gunicorn.socket gunicorn.service
